@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import random
 
-TOKEN = "ODA1NjA5OTc0MzY0NTA0MDc0.YBdYwQ.SM9NaAR8E5pZSu90YmV2ugsN7U0"
+TOKEN = ""
 
 client = commands.Bot(command_prefix="mud ", help_command=None)
 
