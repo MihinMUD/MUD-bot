@@ -1,2 +1,3 @@
-# MUD-bot
-Source COde Of my bot !
+# MUD-discord-bot
+
+A fun discord bot to your server!!
