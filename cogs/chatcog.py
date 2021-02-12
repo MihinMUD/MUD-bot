@@ -100,8 +100,12 @@ class chatcog(commands.Cog):
     @commands.command(aliases=["calc"])
     async def c(self ,ctx, *, sum):
         await ctx.send(eval(sum))
-
-
+        
+        
+    @commands.command()
+    async def invite(self , ctx):
+        await ctx.send("
+https://discord.com/api/oauth2/authorize?client_id=805609974364504074&permissions=67468353&scope=bot")
 
 def setup(client):
     client.add_cog(chatcog(client))
