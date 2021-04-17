@@ -23,11 +23,14 @@ def get_youtube_data(term):
                                 htm_content.read().decode())
     return 'http://www.youtube.com/watch?v=' + search_results[0]
 
-
+def bold(term):
+    term = "**" + term "**"
+    return term
 class featurescog(commands.Cog):
     def __init__(self, client):
         self.client = client
 
+        
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def leave(self , ctx):
@@ -45,7 +48,7 @@ class featurescog(commands.Cog):
     @commands.has_permissions(administrator=True)
     async def clr(self , ctx, amount=5):
         deleted = await ctx.channel.purge(limit=amount)
-        await ctx.send(f"{ctx.message.author.display_name} has deleted {len(deleted)} messages")
+        await ctx.send(f"{bold(ctx.message.author.display_name)}** has deleted {bold(len(deleted))} messages")
 
     @commands.command()
     async def roll(self , ctx, *, side):
